@@ -6,7 +6,10 @@ Where the source data has this desription in the Readme.txt file:
 
 *The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details.*
 
-From this data set the two data sets of "test" and "train" were asisgned row and headings from the appropriate "subject_test.txt" and "y_test.txt" files with column headings for both sourced from "features.txt".  All fields in these data sets that did not correspond to Mean or Standard deviation were discarded and combined together to produce a single set before finally changing the anmes into more redable formats as described below
+The Script "run_analysis.R" manipulates this data into a tidy data set with the conditions below.  For more detail on the function of the Script and the output see "ReadMe.MD"
+
+From this data set the two data sets of "test" and "train" were asisgned row and headings from the appropriate "subject_test.txt" and "y_test.txt" files with column headings for both sourced from "features.txt".  All fields in these data sets that did not correspond to Mean or Standard deviation were discarded and combined together to produce a single set before finally changing the names into more readable formats as described below
+
 
 ##Column headings
 

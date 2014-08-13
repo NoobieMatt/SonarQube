@@ -76,7 +76,7 @@ recasts the melted table "melted" into a new table passing the "mean" function t
 Defines the Source data location for the data set and the location where it should be placed
 
 #Stage 2: 
-Identifies if any of teh data is present either in Zipped or unzipped forms, If the Zip is not available it downloads from "src" and unzips, if the zip is already present it unzips
+Identifies if any of the data is present either in Zipped or unzipped forms, If the Zip is not available it downloads from "src" and unzips, if the zip is already present it unzips
 
 #Stage 3: 
 The data set identifies commen headings and desriptions use din both the training and test data sets so these are read in and defined here. the features table is read in and column 2 is extracted into a single vector to be used as the column headings for the two data sets.  
@@ -97,7 +97,7 @@ the column order is then defined by setting column 1 to "Activity", followed by 
 Finally the complete table is melted into a tall data set of the Subjects and Activities as the rows and each column heading now as a variable
 the columns are also given "tidier" names by a set of setnames statements and the use of gsub for pattern matching (see CodeBook.md for information on the columns)
 once melted is recast into a data.table of the means of the selected columns in stage 4 by each activity
-
+the output from this stage is written to a text file "tidy_data.txt" in the working directory
 
 
 
