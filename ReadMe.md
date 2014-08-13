@@ -36,6 +36,9 @@ The extract of the column names from the headings file sourced in s2datahead int
 * s2trrowhead
 Import of The row headings table for the training data set
 
+* subjects1
+Import of The row headings table for the subjects in the training data set
+
 * s2train
 Table of the training data set and reused with column binding by the row headings in "ActCode" and then selecting columns that contain "activity", "mean" or "std" 
 
@@ -45,8 +48,14 @@ Import of The row headings table for the testing data set
 * s2test
 Read table of the testing data set and reused with column binding by the row headings in "ActCode" and then selecting columns that contain "activity", "mean" or "std" 
 
+* subjects2
+Import of The row headings table for the subjects in the test data set
+
+*Subject
+Recycled varible to store the row headings for the data set being worked between test and training for the Subject being measured
+
 * ActCode
-Recycled varible to store the row headings for the data set being worked between test and training
+Recycled varible to store the row headings for the data set being worked between test and training for the Activity being measured
 
 * complete
 A completed data.table binding s2train and s2test, then using plyr to match the Activity code to the descriptive activity and renoving the Activity code once joined
@@ -85,7 +94,8 @@ In case opinion differs on the column definition for mean and std, the actual na
 the column order is then defined by setting column 1 to "Activity", followed by the rest of the columns captured above
 
 #Stage 6:
-Finally the complete table is melted into a tall data set of the Activities ans the rows and each column heading now as a variable
+Finally the complete table is melted into a tall data set of the Subjects and Activities as the rows and each column heading now as a variable
+the columns are also given "tidier" names by a set of setnames statements and the use of gsub for pattern matching (see CodeBook.md for information on the columns)
 once melted is recast into a data.table of the means of the selected columns in stage 4 by each activity
 
 
