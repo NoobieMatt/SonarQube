@@ -93,5 +93,3 @@
 
       
       write.table(cast, "tidy_data.txt", row.names=FALSE)
-
-      write.csv(cast, "dump.csv")
