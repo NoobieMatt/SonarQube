@@ -2,6 +2,8 @@
 ##Information for the script "run_analysis.R"
 
 ###Prerequisite R Libraries:
+###Some Comment
+And a wrong comment
 
 ##Testing Pull Request
 
